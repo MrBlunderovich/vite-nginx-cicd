@@ -37,7 +37,7 @@ function MainPage() {
     <>
       <h1>Main Page</h1>
       <button
-        className="flex min-w-40 items-center justify-center gap-4 rounded bg-zinc-400 px-4 py-2 text-slate-800"
+        className="flex min-w-40 items-center justify-center gap-4 rounded bg-red-400 px-4 py-2 text-slate-800"
         onClick={() => setCount((count) => count + 1)}
       >
         {count}
