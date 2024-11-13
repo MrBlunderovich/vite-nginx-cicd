@@ -43,7 +43,7 @@ function MainPage() {
         {count}
       </button>
       <Link className="underline" to="/another">
-        Go to another page maybe?
+        Go to another page maybe????
       </Link>
     </>
   );
