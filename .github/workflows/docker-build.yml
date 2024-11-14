@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: set lower case owner name
+        run: |
+          echo "OWNER_LC=${OWNER,,}" >>${GITHUB_ENV}
+        env:
+          OWNER: "${{ github.repository }}"
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -25,8 +31,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository }}/my-vite-app:${{ github.sha }} .
+          docker build -t ghcr.io/${{ env.OWNER }}/my-vite-app:${{ github.sha }} .
 
       - name: Push Docker image to GHCR
         run: |
-          docker push ghcr.io/${{ github.repository }}/my-vite-app:${{ github.sha }}
+          docker push ghcr.io/${{ env.OWNER }}/my-vite-app:${{ github.sha }}
