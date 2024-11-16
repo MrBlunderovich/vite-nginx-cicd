@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: false #block workflow1
+    if: false #block workflow2
     runs-on: ubuntu-latest
 
     steps:
