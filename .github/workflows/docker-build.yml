@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-    if: false #block workflow2
     runs-on: ubuntu-latest
 
     steps:
@@ -26,8 +25,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/mrblunderovich/vite-cicd:${{ github.sha }} .
+          docker build -t ghcr.io/mrblunderovich/vite-cicd:latest .
 
       - name: Push Docker image to GHCR
         run: |
-          docker push ghcr.io/mrblunderovich/vite-cicd:${{ github.sha }}
+          docker push ghcr.io/mrblunderovich/vite-cicd:latest
