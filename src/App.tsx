@@ -20,7 +20,7 @@ function Layout() {
       <header className="flex min-h-10 items-center justify-center gap-4 bg-zinc-900">
         header
       </header>
-      <main className="flex grow flex-col items-center justify-center gap-4 bg-zinc-800">
+      <main className="flex grow flex-col items-center justify-center gap-4 bg-emerald-700">
         <Outlet />
       </main>
       <footer className="flex min-h-10 items-center justify-center gap-4 bg-zinc-900">
